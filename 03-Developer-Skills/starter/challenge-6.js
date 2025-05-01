@@ -23,6 +23,7 @@ const calcAverage = (score1, score2, score3) => {
 }
 console.log (calcAverage(44, 23, 71));
 
+// Changed the const to let so the variables could be reused
 //const scoreDolphins = calcAverage(44, 23, 71);
 //const scoreKoalas = calcAverage(65, 54, 49);
 
@@ -44,3 +45,10 @@ const checkWinner = function (avgDolphins, avgKoalas) {
   };
    
   checkWinner(scoreDolphins, scoreKoalas);
+  checkWinner(1000, 499);
+
+  //Test 2 - removed the let
+scoreDolphins = calcAverage(90, 54, 71);
+scoreKoalas = calcAverage(100, 54, 71);
+console.log(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas);
